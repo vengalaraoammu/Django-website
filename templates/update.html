@@ -1,0 +1,110 @@
+<!Doctype Html>  
+<Html>     
+<Head>      
+<Title>     
+Join Now  
+</Title>  
+</Head>  
+<style>
+h3{
+	color:#A4A4A4;
+	padding-left:75px;
+}
+.b1{
+	
+	color:red;
+}
+.b2{
+	float: left;
+  bcolor: #f2f2f2;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 16px;
+  margin-top: 30px;
+  
+
+}
+.c1{
+	float: left;
+  bcolor: #f2f2f2;
+  text-align: center;
+  margin-top: 30px;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 16px;
+  margin-right: 50px;
+  margin-left: 250px;
+}
+div{
+	bolder:none;
+	border-style:groove;
+	border-width: 3px;
+}
+div.a.split{
+	float: left;
+}
+.btn{
+	margin: 30px 230px;
+}
+table{
+	margin-left: 70px;
+	margin-top: 20px;
+	
+}
+
+</style>
+<Body>   
+<h3>Hai, My Dear Friend Welcome to updatePage </h3>
+<form method="post">  
+	{% csrf_token %}
+<table width="450px"> 
+</tr>
+<tr>
+<td>
+<label for="First_Name">First_Name :</label>
+</td>
+<td>
+<input type="text" name="First_Name" maxlength="50px" size="30px" required>
+</td>
+</tr>
+<tr>
+<td>
+<label for="Last_Name">Last_Name :</label>
+</td>
+<td>
+<input type="text" name="Last_Name" maxlength="50px" size="30px" required>
+</td>
+</tr>
+<tr>
+<td>
+<label for="WhatsappNumber">What's App Number :</label>
+</td>
+<td>
+<input type="text" name="WhatsappNumber" maxlength="50px" size="30px" required>
+</td>
+<tr>
+<td>
+<label for="Phone_Number">Phone_Number :</label>
+</td>
+<td>
+<input type="text" name="Phone_Number" maxlength="50px" size="30px" required>
+</td>
+</table>
+<div class="c1">
+	<input type="submit" value="submit">
+</div>
+<div class="b2">
+	<a href="/friendsReport" class="split">Reports</a>
+</div>
+</form>    
+{% if error %}
+  <p style="color: red">{{ error }}</p>
+{% endif %}
+
+</Body>   
+</Html>  

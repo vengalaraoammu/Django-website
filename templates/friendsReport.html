@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reports</title>
+</head>
+<body>
+    <ul class="sidebar-nav">
+       {% if user.is_authenticated %}
+         <li>User: {{ user.get_username }}</li>
+       {% endif %}
+      </ul>
+<h1>FriendsReport </h1>
+
+<table border="1">
+    <tr>
+        <th>First_Name</th>
+        <th>Last_Name</th>
+        <th>What'sApp Number</th>
+        <th>Phone_Number</th>
+        <th>Actions</th>
+
+    </tr>
+
+{% for s in friendsReport %}
+    <tr>
+        <td>{{s.First_Name}}</td>
+        <td>{{s.Last_Name}}</td>
+        <td>{{s.WhatsappNumber}}</td>
+        <td>{{s.Phone_Number}}</td>
+        <td><a href="/update/{{s.id}}">update</a>
+            <a href="/delete/{{s.id}}">Delete</a></td>
+
+{%endfor%}
+    </tr>
+    {% csrf_token %}
+</table>
+<div>
+    <a href="/accounts/logout"><button type="button",name="Button">Logout</button></a><br/><br/>
+  </div>
+</body>
+</html>

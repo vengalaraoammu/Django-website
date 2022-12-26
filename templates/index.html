@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<style>
+h1{
+	text-align:center;
+}
+h3{
+	text-align:center;
+}
+p{
+	text-align:center;
+	font-style: oblique;
+}
+body {
+	background-image: url("https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20220812092544/Great-Ocean-Road.jpg");  
+	background-repeat: no-repeat;  
+	background-size: cover;
+	background-position: cover;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  text-align: center;
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: 0.5s;
+  border-radius: 16px;
+
+}
+.topnav a.split {
+  float: right;
+  bcolor: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 16px;
+  
+ }
+ .topnav a:hover {
+  background-color: #ddd;
+  color: black;
+ }
+.join {
+  overflow: hidden;
+  text-align: center;
+  padding-top:40px;
+  -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* For Safari 3.1 to 6.0 */  
+    transition: width 2s, height 2s, transform 2s;
+	
+}
+.join a:{
+	float: right;
+	bcolor: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+	transition: 0.7s;
+	
+}
+
+.button {
+        background-color: #1c87c9;
+        border: none;
+		border-style: groove;
+		border-radius: 16px;
+        color: white;
+        padding: 20px 34px;
+        text-align: right;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin: 4px 2px;
+        cursor: pointer;
+		box-shadow : 0 8px 16px 0 black, 
+                    0 6px 20px  0 rgba(0, 0, 0, 0.19);
+      }
+.join a:hover {
+  background-color: #ddd;
+  color: black;
+  border-style: groove;
+  }
+  
+</style>
+<body>
+
+<h1 style="color: red;">Hello World!</h1>
+<p style="font-weight:bold">The reason for creating this website is for the students who have completed 10th class in KRZPH school in batch year 2012-13.</p>
+<div class="topnav">
+  <a class="active" href="/JoinNow">Home</a>
+  <a href="#news">News</a>
+  <a href="/admin" class="split">Admin</a>
+  <a href="/friendsReport" class="split">Reports</a>
+</div>
+
+<h3>Hai,Very One</h3>
+<p>The reason for creating this website is for the students who have completed 10th class in KRZPH school in batch year 2012-13.</p>
+
+<div class="join">
+	<h2><a href='/JoinNow'>JoinNow</a></h2>
+</div>
+
+
+{% if error %}
+  <p style="color: green">{{ error }}</p>
+{% endif %}
+</body>
+</html>
